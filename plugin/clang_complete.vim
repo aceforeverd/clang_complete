@@ -488,7 +488,7 @@ function! ClangComplete(findstart, base)
         let s:old_snr = matchstr(maparg('<CR>', 'i'), '<SNR>\d\+_')
       endif
       inoremap <expr> <buffer> <C-Y> <SID>HandlePossibleSelectionCtrlY()
-      inoremap <expr> <buffer> <CR> <SID>HandlePossibleSelectionEnter()
+      " inoremap <expr> <buffer> <CR> <SID>HandlePossibleSelectionEnter()
     endif
     augroup ClangComplete
       au CursorMovedI <buffer> call <SID>TriggerSnippet()
