@@ -14,6 +14,7 @@ class Source(Base):
         self.filetypes = ['c', 'cpp', 'objc', 'objcpp']
         self.is_bytepos = True
         self.input_pattern = '[^. \t0-9]\.\w*'
+        self.rank = 900
 
     def get_complete_position(self, context):
         return self.vim.call('ClangComplete', 1, 0)
